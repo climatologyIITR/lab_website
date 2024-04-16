@@ -8,7 +8,7 @@ const Container = (props) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={`container mx-auto xl:px-0 ${
+      className={`container pl-0 pr-0  ${
         props.className ? props.className : ''
       }`}
     >
