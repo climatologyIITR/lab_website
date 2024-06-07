@@ -19,9 +19,9 @@ import Link from "next/link";
 
 const Notice = () => {
   return (
-    <div className="px-10 sm:px-12 md:px-16 lg:px-20 py-8 sm:py-10 md:py-12 lg:py-16">
+    <div className='bg-[#FFF] px-[80px] py-[70px]'>
       <Container>
-        <h1 className="uppercase text-fontHeading font-bold text-[32px] w-fit">
+        <h1 className="uppercase text-[#09539D] text-[32px] font-[600] leading-[150%]">
           notice Board
         </h1>
         <Carousel
@@ -33,19 +33,19 @@ const Notice = () => {
         >
           <CarouselPrevious />
           <CarouselNext />
-          <CarouselContent className="-ml-1">
+          <CarouselContent>
             {Array.from({ length: 6 }).map((_, index) => (
               <CarouselItem className="pl-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/5 shadow-lg cursor-grab">
-                <div className="p-1">
-                  <Card className="p-3">
-                    <CardTitle>NEW WORKSHOP</CardTitle>
-                    <CardDescription>unveiling-1</CardDescription>
-                    <CardContent className="p-0">
-                      <p className="text-[14px] text-[#1D1D1D] font-light font-secondary mb-2">
+                <div className="mr-[24px] rounded-[8px] bg-[#FFF] shadow-[1px_2px_12px_0px_rgba(0,0,0,0.16)]">
+                  <div className="p-[12px]">
+                    <div className="text-[#1D1D1D] text-[20px] font-[500] leading-[125%]">NEW WORKSHOP</div>
+                    <div className="text-[#1D1D1D] text-[16px] font-[400] leading-[125%] opacity-[0.8]">unveiling-1</div>
+                    <div className="p-0">
+                      <p className="text-[14px] text-[#1D1D1D] font-[300] leading-[150%] opacity-[0.8] mt-[16px]">
                         The consequent session of the workshop CURATE (Climate
                         Understanding Rebooting for ArchitecTure Education){" "}
                       </p>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between text-[14px] text-[#1D1D1D] font-[400] leading-[150%] opacity-[0.8] mt-[24px]">
                         <p>Date: 20-4-24</p>
                         <div className="hover:text-blue-300 hover:underline flex cursor-pointer">
                           {" "}
@@ -57,8 +57,8 @@ const Notice = () => {
                           />
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
