@@ -11,7 +11,7 @@ import phone from "@/assets/phone.svg";
 
 const Footer = () => {
   return (
-    <div className="flex bg-[#022140] px-[91px] py-[88px] gap-[19px]">
+    <div className="flex bg-[#022140] px-[80px] py-[88px] gap-[19px]">
       <div className="flex flex-col gap-[24px]">
         <div className="flex text-[#FFF] text-[16px] font-[400] leading-[150%] gap-[24px]">
           <span className="flex flex-col gap-[16px]">
@@ -20,9 +20,9 @@ const Footer = () => {
             <Link href={"/"}>Resources</Link>
           </span>
           <span className="flex flex-col gap-[16px]">
-            <Link href={"/"}>Workshops</Link>
-            <Link href={"/"}>Projects</Link>
-            <Link href={"/"}>Affiliations</Link>
+            <Link href={"/workshops"}>Workshops</Link>
+            <Link href={"/projects"}>Projects</Link>
+            <Link href={"/affiliations"}>Affiliations</Link>
           </span>
           <span className="flex flex-col gap-[16px]">
             <Link href={"/"}>Educational</Link>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-[21px] text-[#FFF] text-[16px] font-[400] leading-[150%] ">
           <span className="flex gap-[12px]"><Image src={location} width={17} height={16} />Architecture dept. ,IIT Roorkee, Uttarakhand (247667)</span>
-          <div className="flex justify-between">
+          <div className="flex gap-[80px]">
             <span className="flex gap-[12px] items-center"><Image src={phone} width={17} height={16} />+91 7298200002</span>
             <span className="flex gap-[16px] justify-end">
               <Image src={mailFooter} width={36} height={36} />
