@@ -13,14 +13,6 @@ const page = ({ params }) => {
                     <h1 className='text-[#09539D] text-[32px] font-[600] leading-[150%] uppercase mb-[31px]'>Faculty</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[32px]">
                         <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
-                        <TeamCard />
                     </div>
                 </div>
             </div>
