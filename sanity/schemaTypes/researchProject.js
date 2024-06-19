@@ -25,6 +25,7 @@ export default {
                 },
                 { name: 'financialOutlay', type: 'number', title: 'Financial Outlay' },
                 { name: 'fundingAgency', type: 'string', title: 'Funding Agency' },
+                { name: 'location', type: 'string', title: 'Location' },
                 { name: 'contributors', type: 'array', title: 'Contributors', of: [{ type: 'string' }] },
             ]
         },

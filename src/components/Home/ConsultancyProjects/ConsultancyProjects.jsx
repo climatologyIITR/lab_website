@@ -8,9 +8,25 @@ import {
 } from "@/components/ui/carousel";
 import Container from "@/components/ui/container";
 import Image from "next/image";
-import ResearchImage from "@/assets/researchProject.svg"
+import { client, urlFor } from "@/app/lib/sanity";
 
-const ConsultancyProjects = () => {
+const getProjects = async () => {
+    const query = `*[_type=='consultancyProject'] | order(_createdAt desc){
+  _id,
+    title,
+    description,
+    details,
+    "image":titleImage.asset._ref,
+    status,
+}  `
+
+    const data = await client.fetch(query);
+    return data;
+}
+
+const ConsultancyProjects = async () => {
+    const data = await getProjects();
+
     return (
         <div className='bg-[#FFF] px-[80px] py-[65px]'>
             <Container>
@@ -27,21 +43,21 @@ const ConsultancyProjects = () => {
                     <CarouselPrevious />
                     <CarouselNext />
                     <CarouselContent>
-                        {Array.from({ length: 7 }).map((_, index) => (
-                            <CarouselItem>
+                        {data.map((project) => (
+                            <CarouselItem key={project?._id}>
                                 <div className="flex border-none gap-[24px] rounded-[16px] bg-[#FFF] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.16)] px-[30px] py-[34px] my-[1%]">
-                                    <Image src={ResearchImage} height={145} width={280} className="rounded-[8px]" />
+                                    <Image src={urlFor(project?.image).url()} height={145} width={280} className="rounded-[8px]" />
                                     <div className="flex flex-col">
-                                        <div className="text-[#1D1D1D] text-[20px] font-[500] leading-[125%]">Eco-system based Risk Resilience Planning for Sustainable Habitat in Himalayan Ecosystem</div>
+                                        <div className="text-[#1D1D1D] text-[20px] font-[500] leading-[125%]">{project?.title} </div>
                                         <div className="flex gap-[24px] mt-[24px]">
                                             <div className="text-[#1D1D1D] text-[16px] font-[300] leading-[150%] opacity-[0.8] w-[40vw]">
-                                                Assessing the effectiveness of green roof installations in mitigating urban heat islands, exploring the correlation between vegetation cover and temperature reduction in urban environments. explores various facets of climatology to understand and address the challenges posed by a rapidly evolving environment. advantages get us where all is what happens lorem ipsum.
+                                                {project?.description}
                                             </div>
                                             <div className="flex flex-col w-[20vw]">
-                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Field<span className="ml-[10px] opacity-[0.8]">Built environment</span></div>
-                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Start Date<span className="ml-[10px] opacity-[0.8]">01-01-2024</span></div>
-                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Financial Outlay<span className="ml-[10px] opacity-[0.8]">24.6 Lacs</span></div>
-                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Funding Agency<span className="ml-[10px] opacity-[0.8]">NMHS-MoEF</span></div>
+                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Field<span className="ml-[10px] opacity-[0.8]">{project?.details?.field}</span></div>
+                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Start Date<span className="ml-[10px] opacity-[0.8]">{project?.details?.startDate}</span></div>
+                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Financial Outlay<span className="ml-[10px] opacity-[0.8]">{project?.details?.financialOutlay}</span></div>
+                                                <div className="text-[#1D1D1D] text-[16px] font-[500] leading-[150%]">Funding Agency<span className="ml-[10px] opacity-[0.8]">{project?.details?.fundingAgency}</span></div>
                                             </div>
                                         </div>
                                     </div>

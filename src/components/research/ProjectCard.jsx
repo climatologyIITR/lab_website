@@ -1,28 +1,28 @@
+import Link from 'next/link'
 import React from 'react'
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
     return (
-        <div className='flex items-center justify-between border-t-[1px] border-t-solid border-t-[#BABABA] border-b-[1px] border-b-solid border-b-[#BABABA] p-[12px]'>
+        <Link className='flex items-center justify-between border-t-[1px] border-t-solid border-t-[#BABABA] border-b-[1px] border-b-solid border-b-[#BABABA] p-[12px]' href={`/projects/${project._type === 'researchProject' ? 'research' : 'consultancy'}/${project._id}`}>
             <div className='w-[30%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                Rebuilding Rainbow school in
-                Saharanpur, Uttar Pradesh
+                {project?.title}
             </div>
             <div className='w-[10%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                01-01-2024
+                {project?.details?.startDate}
             </div>
             <div className='w-[20%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                Saharanpur,Uttar Pradesh
+                {project?.details?.location}
             </div>
             <div className='w-[10%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                24.6 Lacs
+                {project?.details?.financialOutlay}
             </div>
             <div className='w-[20%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                NMHS-MoEF
+                {project?.details?.fundingAgency}
             </div>
             <div className='w-[10%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                ongoing
+                {project?.status}
             </div>
-        </div>
+        </Link>
     )
 }
 
