@@ -18,7 +18,7 @@ export default {
                     name: 'email',
                     type: 'url',
                     validation: Rule => Rule.uri({
-                        scheme: ['mailto']
+                        scheme: ['http', 'https', 'mailto']
                     })
                 },
                 {
@@ -37,7 +37,7 @@ export default {
             type: 'string',
             options: {
                 list: [
-                    { title: 'Alumi', value: 'alumi' },
+                    { title: 'Alumni', value: 'alumni' },
                     { title: 'Faculty', value: 'faculty' },
                     { title: 'Phd Scholars', value: 'phdScholars' },
                     { title: 'Post Graduates', value: 'postGraduates' },
@@ -50,6 +50,10 @@ export default {
             type: "text",
             title: "Field of Research",
         },
-
+        {
+            name: "image",
+            type: "image",
+            title: "Image",
+        },
     ]
 }

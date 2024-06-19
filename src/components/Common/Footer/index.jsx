@@ -15,18 +15,19 @@ const Footer = () => {
       <div className="flex flex-col gap-[24px]">
         <div className="flex text-[#FFF] text-[16px] font-[400] leading-[150%] gap-[24px]">
           <span className="flex flex-col gap-[16px]">
-            <Link href={"/"}>DAP Website</Link>
+            <Link href={'https://iitr.ac.in/Departments/Architecture%20and%20Planning%20Department/index.html'}>DAP Website</Link>
             <Link href={"/"}>Opportunities</Link>
             <Link href={"/"}>Resources</Link>
           </span>
           <span className="flex flex-col gap-[16px]">
             <Link href={"/workshops"}>Workshops</Link>
-            <Link href={"/projects"}>Projects</Link>
-            <Link href={"/affiliations"}>Affiliations</Link>
+            <Link href={"/projects/research"}>Research Projects</Link>
+            <Link href={"/projects/consultancy"}>Consultancy Projects</Link>
           </span>
           <span className="flex flex-col gap-[16px]">
+            <Link href={"/affiliations"}>Affiliations</Link>
             <Link href={"/"}>Educational</Link>
-            <Link href={"/"}>Alumni</Link>
+            <Link href={"/team"}>Team</Link>
           </span>
         </div>
         <div className="flex gap-[40px]">

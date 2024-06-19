@@ -2,8 +2,22 @@ import Footer from '@/components/Common/Footer'
 import Navbar from '@/components/Common/Navbar'
 import PublicationCard from '@/components/PublicationCard'
 import React from 'react'
+import { client } from '../lib/sanity'
 
-const page = () => {
+const getPublications = async () => {
+    const query = `*[_type=='publication'] | order(_createdAt asc) {
+  _id,
+    title,
+    details,
+}`
+
+    const data = await client.fetch(query);
+    return data;
+}
+
+const page = async () => {
+    const data = await getPublications();
+
     return (
         <div className='w-full h-full'>
             <Navbar />
@@ -19,12 +33,9 @@ const page = () => {
                             <span className='w-[30%]'>Other participants</span>
                         </div>
                         <div className="flex flex-col">
-                            <PublicationCard />
-                            <PublicationCard />
-                            <PublicationCard />
-                            <PublicationCard />
-                            <PublicationCard />
-                            <PublicationCard />
+                            {data.map((pub) => (
+                                <PublicationCard publication={pub} key={pub._id} />
+                            ))}
                         </div>
                     </div>
                 </div>
