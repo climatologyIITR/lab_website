@@ -4,7 +4,7 @@ import TeamCard from '@/components/TeamCard';
 import React from 'react'
 
 const page = ({ params }) => {
-    const { slug } = params;
+    // const { slug } = params;
     return (
         <div className='w-full h-full'>
             <Navbar />
