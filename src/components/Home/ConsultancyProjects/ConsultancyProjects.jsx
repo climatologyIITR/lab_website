@@ -46,7 +46,7 @@ const ConsultancyProjects = async () => {
                         {data.map((project) => (
                             <CarouselItem key={project?._id}>
                                 <div className="flex border-none gap-[24px] rounded-[16px] bg-[#FFF] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.16)] px-[30px] py-[34px] my-[1%]">
-                                    <Image src={urlFor(project?.image).url()} height={145} width={280} className="rounded-[8px]" />
+                                    <Image src={urlFor(project?.image).url()} height={145} width={280} className="rounded-[8px]" alt="" />
                                     <div className="flex flex-col">
                                         <div className="text-[#1D1D1D] text-[20px] font-[500] leading-[125%]">{project?.title} </div>
                                         <div className="flex gap-[24px] mt-[24px]">

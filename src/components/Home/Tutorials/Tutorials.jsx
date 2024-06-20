@@ -46,8 +46,8 @@ const Tutorials = async () => {
                                     <div className="flex flex-col w-[50vw]">
                                         <div className="text-[#1D1D1D] text-[24px] font-[500] leading-[125%]">{tut?.title}</div>
                                         <div className="text-[#1D1D1D] text-[16px] font-[300] leading-[150%] opacity-[0.8]">
-                                            {tut?.keyConcepts.map((line) => (
-                                                <ul>{line}</ul>
+                                            {tut?.keyConcepts.map((line, index) => (
+                                                <ul key={index}>{line}</ul>
                                             ))}
                                         </div>
                                     </div>

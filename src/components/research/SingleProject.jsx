@@ -17,8 +17,8 @@ const SingleProject = ({ data }) => {
                     <div className="text-[#000] text-[16px] font-[500] leading-[150%]">Funding Agency<span className="ml-[5px] opacity-[0.8]">{data?.details?.fundingAgency}</span></div>
                     <div className="text-[#000] text-[16px] font-[500] leading-[150%]">Contributors
                         <span className="ml-[5px] opacity-[0.8]">
-                            {data?.details?.contributors.map((member) => (
-                                <p>{member},</p>
+                            {data?.details?.contributors.map((member, ind) => (
+                                <p key={ind}>{member},</p>
                             ))}
                         </span>
                     </div>

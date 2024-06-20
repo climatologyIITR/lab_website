@@ -13,13 +13,13 @@ const PublicationCard = ({ publication }) => {
                 {publication?.details?.field}
             </div>
             <div className='flex flex-wrap w-[10%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                {publication?.details?.labMembers.map((member) =>
-                    <p>{member},</p>
+                {publication?.details?.labMembers.map((member, ind) =>
+                    <p key={ind}>{member},</p>
                 )}
             </div>
             <div className='flex flex-wrap w-[30%] text-[#1D1D1D] text-[16px] font-[400] leading-[125%] '>
-                {publication?.details?.otherParticipants.map((member) =>
-                    <p>{member},</p>
+                {publication?.details?.otherParticipants.map((member, ind) =>
+                    <p key={ind}>{member},</p>
                 )}
             </div>
         </div>

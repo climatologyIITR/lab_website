@@ -15,7 +15,7 @@ const SingleWorkshop = ({ data }) => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center mt-[5vh] w-[30%]">
-                    <Image src={urlFor(data?.image).url()} height={545} width={450} className="rounded-[22px]" />
+                    <Image src={urlFor(data?.image).url()} height={545} width={450} className="rounded-[22px]" alt="" />
                 </div>
             </div>
             <div className="flex justify-between items-center mt-[34px]">
@@ -30,8 +30,8 @@ const SingleWorkshop = ({ data }) => {
             <div className="mt-[80px]">
                 <h1 className="text-[#1D1D1D] text-[24px] font-[500] leading-[125%] mb-[10px]">Photos</h1>
                 <div className="flex justify-evenly flex-wrap">
-                    {data?.photos?.map((photo) => (
-                        <Image src={urlFor(photo?.asset._ref).url()} width={296} height={296} />
+                    {data?.photos?.map((photo, ind) => (
+                        <Image src={urlFor(photo?.asset._ref).url()} width={296} height={296} alt="" key={ind} />
                     ))}
                 </div>
             </div>

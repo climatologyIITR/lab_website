@@ -59,7 +59,7 @@ const Workshop = async () => {
                                         </div>
                                     </div>
                                     <div className="w-[35vw]">
-                                        <Image src={urlFor(workshop?.image).url()} height={345} width={280} className="rounded-[8px]" />
+                                        <Image src={urlFor(workshop?.image).url()} height={345} width={280} className="rounded-[8px]" alt="" />
                                     </div>
                                 </div>
                             </CarouselItem>

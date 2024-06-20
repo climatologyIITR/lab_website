@@ -15,8 +15,8 @@ const TutorialCard = ({ tut }) => {
                             Key concepts covered:
                             <br />
                         </span>
-                        {tut?.keyConcepts.map((line) => (
-                            <li>{line}</li>
+                        {tut?.keyConcepts.map((line, ind) => (
+                            <li key={ind}>{line}</li>
                         ))}
                     </span>
                 </div>

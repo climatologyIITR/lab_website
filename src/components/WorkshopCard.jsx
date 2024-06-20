@@ -63,6 +63,7 @@ const WorkshopCard = ({ workshop }) => {
                     height={345}
                     width={280}
                     className="rounded-[8px]"
+                    alt=""
                 />
             </div>
         </Link>
