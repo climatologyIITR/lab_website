@@ -1,21 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import dapLogo from "@/assets/dapLogo.svg"
-import labLogo from "@/assets/labLogo.svg"
+import dapLogo from "../../../../public/assets/dapLogo.svg"
+import labLogo from "../../../../public/assets/labLogo.svg"
 import Link from "next/link";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarTrigger,
+} from "@/components/ui/menubar"
 
 
 const Navbar = () => {
@@ -26,36 +22,37 @@ const Navbar = () => {
         CLIMATOLOGY LAB
       </Link>
       <div className="flex gap-[68px] my-[15px] text-[rgba(0,0,0,0.80)] text-[16px] font-[500] leading-[150%] tracking-[-0.304px] ">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>ACTIVITIES</NavigationMenuTrigger>
-              <NavigationMenuContent className="!flex !flex-col !justify-center !items-center !w-[25vw] !h-[10vh]">
-                <NavigationMenuLink><a href={"/workshops"}>WORKSHOPS</a></NavigationMenuLink>
-                <NavigationMenuLink><a href={"/tutorials"}>TUTORIALS</a></NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>PROJECTS</NavigationMenuTrigger>
-              <NavigationMenuContent className="!flex !flex-col !justify-center !items-center !w-[25vw] !h-[10vh]">
-                <NavigationMenuLink><a href={"/projects/research"}>RESEARCH</a></NavigationMenuLink>
-                <NavigationMenuLink><a href={"/projects/consultancy"}>CONSULTANCY</a></NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>PUBLICATIONS</NavigationMenuTrigger>
-              <NavigationMenuContent className="!flex !flex-col !justify-center !items-center !w-[25vw] !h-[10vh]">
-                <NavigationMenuLink><a href={"/publications"}>PUBLICATIONS</a></NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>TEAM</NavigationMenuTrigger>
-              <NavigationMenuContent className="!flex !flex-col !justify-center !items-center !w-[25vw] !h-[10vh]">
-                <NavigationMenuLink><a href={"/team"}>TEAM</a></NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <Menubar className="border-none gap-[5%]">
+          <MenubarMenu>
+            <MenubarTrigger>ACTIVITIES</MenubarTrigger>
+            <MenubarContent className="!flex !flex-col !justify-center !items-center">
+              <MenubarItem><a href={"/workshops"}>WORKSHOPS</a></MenubarItem>
+              <MenubarSeparator />
+              <MenubarItem><a href={"/tutorials"}>TUTORIALS</a></MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>PROJECTS</MenubarTrigger>
+            <MenubarContent className="!flex !flex-col !justify-center !items-center">
+              <MenubarItem><a href={"/projects/research"}>RESEARCH</a></MenubarItem>
+              <MenubarSeparator />
+              <MenubarItem><a href={"/projects/consultancy"}>CONSULTANCY</a></MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>PUBLICATIONS</MenubarTrigger>
+            <MenubarContent className="!flex !flex-col !justify-center !items-center">
+              <MenubarItem><a href={"/publications"}>PUBLICATIONS</a></MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>TEAM</MenubarTrigger>
+            <MenubarContent className="!flex !flex-col !justify-center !items-center">
+              <MenubarItem><a href={"/team"}>TEAM</a></MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+        </Menubar>
+
       </div>
       <Link href={'https://iitr.ac.in/Departments/Architecture%20and%20Planning%20Department/index.html'}>
         <Image src={dapLogo} width={94} height={35} alt="" />

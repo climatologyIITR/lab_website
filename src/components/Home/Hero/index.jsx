@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Container from "@/components/ui/container";
-import researchProject from "../../../assets/researchProject.svg"
+import researchProject from "../../../../public/assets/researchProject.svg"
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay"
 import React from "react";

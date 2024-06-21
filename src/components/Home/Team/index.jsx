@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import linkedinLogo from "@/assets/linkedinLogo.svg";
-import mailLogo from "@/assets/mailLogo.svg";
+import linkedinLogo from "../../../../public/assets/linkedinLogo.svg";
+import mailLogo from "../../../../public/assets/mailLogo.svg";
 import { client, urlFor } from "@/app/lib/sanity";
 import Link from "next/link";
 

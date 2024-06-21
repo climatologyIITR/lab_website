@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "./Form";
-import iitrLogo from "@/assets/iitrLogo.svg";
-import labLogo from "@/assets/labLogo.svg";
-import mailFooter from "@/assets/mailFooter.svg";
-import linkedinFooter from "@/assets/linkedinFooter.svg";
-import location from "@/assets/location.svg";
-import phone from "@/assets/phone.svg";
+import iitrLogo from "../../../../public/assets/iitrLogo.svg";
+import labLogo from "../../../../public/assets//labLogo.svg";
+import mailFooter from "../../../../public/assets//mailFooter.svg";
+import linkedinFooter from "../../../../public/assets//linkedinFooter.svg";
+import location from "../../../../public/assets//location.svg";
+import phone from "../../../../public/assets//phone.svg";
 
 const Footer = () => {
   return (

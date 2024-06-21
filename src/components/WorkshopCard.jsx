@@ -14,21 +14,7 @@ const WorkshopCard = ({ workshop }) => {
                     IGNITION-1
                 </div>
                 <div className="text-[#000] text-[16px] font-[400] leading-[150%] opacity-[0.8] mt-[24px]">
-                    CURATE (Climate Understanding Rebooting for ArchitecTure Education),
-                    essentially an opportunity designed for refreshing and curating
-                    knowledge and understanding role of climatology for Architectural
-                    spaces, revisits and potentially reshapes the syllabus for Climatology
-                    Subject in Undergraduate Architecture classes. Through CURATE, we
-                    explore the pivotal role of climatology in shaping the careers of
-                    budding architects. The importance of integrating climate awareness
-                    into architectural learning is well- practiced norm; though not
-                    necessarily consistent across Architecture Schools in terms of how
-                    they impart and sensitize their students. A variety of subjects carry
-                    the flavour, while Pedagogy and Content differ. With the advent of
-                    Science, Technology and Innovation (IR 4.0 - 5.0), the spread of
-                    urbanization, population explosion, and extreme variability in
-                    atmospheric conditions (climate change), the role of the Architects
-                    has further complicated. Whom to ........
+                    {workshop?.about}
                 </div>
                 <div className="flex gap-[15px] mt-[34px]">
                     <div className="text-[#000] text-[16px] font-[500] leading-[150%]">

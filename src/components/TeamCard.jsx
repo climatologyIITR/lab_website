@@ -1,9 +1,9 @@
 "use client"
 import Image from 'next/image'
 import React from 'react'
-import linkedinLogo from "@/assets/linkedinLogo.svg";
-import mailContact from "@/assets/mailContact.svg";
-import labContact from "@/assets/labContact.svg";
+import linkedinLogo from "../../public/assets/linkedInLogo.svg";
+import mailContact from "../../public/assets/mailContact.svg";
+import labContact from "../../public/assets/labContact.svg";
 import { urlFor } from '@/app/lib/sanity';
 import Link from 'next/link';
 

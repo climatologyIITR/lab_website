@@ -6,13 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
 import { MoveUpRight } from "lucide-react";
 import Container from "@/components/ui/container";
 import Link from "next/link";

@@ -1,4 +1,3 @@
-import Image from "next/image"; // Import Image component from Next.js
 import Navbar from "../components/Common/Navbar/index"; // Import Navbar component from the specified path
 import Hero from "@/components/Home/Hero"; // Import Hero component from the specified path
 import Footer from "@/components/Common/Footer"; // Import Footer component from the specified path
@@ -15,31 +14,31 @@ export default function Home() {
     <main>
       {/* Navbar Component */}
       <Navbar />
-      
+
       {/* Hero Section */}
       <Hero />
-      
+
       {/* Banner Section */}
       <Banner />
-      
+
       {/* Notice Section */}
       <Notice />
-      
+
       {/* Research Projects Section */}
       <ResearchProjects />
-      
+
       {/* Tutorials Section */}
       <Tutorials />
-      
+
       {/* Workshop Section */}
       <Workshop />
-      
+
       {/* Consultancy Projects Section */}
       <ConsultancyProjects />
-      
+
       {/* Team Section */}
       <Team />
-      
+
       {/* Footer Component */}
       <Footer />
     </main>
