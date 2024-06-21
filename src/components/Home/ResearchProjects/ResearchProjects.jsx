@@ -52,7 +52,7 @@ const ResearchProjects = async () => {
                       <div className="text-[#FFF] text-[20px] font-[500] leading-[125%]">{project?.title}</div>
                       <div className="flex gap-[24px] mt-[24px]">
                         <div className="text-[#FFF] text-[16px] font-[300] leading-[150%] opacity-[0.8] w-[40vw]">{project?.description} </div>
-                        <div className="flex flex-col items-center justify-center w-[20vw]">
+                        <div className="flex flex-col w-[20vw]">
                           <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Field<span className="ml-[10px] opacity-[0.8]">
                             {project?.details?.field} </span></div>
                           <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Start Date<span className="ml-[10px] opacity-[0.8]">{project?.details?.startDate}</span></div>
