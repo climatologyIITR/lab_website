@@ -9,6 +9,7 @@ import {
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import { client, urlFor } from "@/app/lib/sanity";
+import Link from "next/link";
 
 const getWorkshops = async () => {
     const query = `*[_type=='workshops'] | order(_createdAt desc){
@@ -43,26 +44,28 @@ const Workshop = async () => {
                     <CarouselNext />
                     <CarouselContent className="">
                         {data.map((workshop) => (
-                            <CarouselItem key={workshop?._id} >
-                                <div className="flex border-none gap-[24px] rounded-[16px] bg-[#3F9DA9] shadow-[0px_-4px_10px_0px_rgba(0,0,0,0.16)] px-[30px] py-[34px] ">
-                                    <div className="flex flex-col">
-                                        <div className="text-[#FFF] text-[20px] font-[500] leading-[125%]">{workshop?.title} </div>
-                                        <div className="text-[#FFF] text-[16px] font-[500] opacity-[0.8]">IGNITION-1</div>
-                                        <div className="text-[#FFF] text-[16px] font-[300] leading-[150%] opacity-[0.8] w-[60vw] mt-[24px]">
-                                            {workshop?.about}
+                            <Link href={`workshops/${workshop._id}`} key={workshop?._id} >
+                                <CarouselItem>
+                                    <div className="flex border-none gap-[24px] rounded-[16px] bg-[#3F9DA9] shadow-[0px_-4px_10px_0px_rgba(0,0,0,0.16)] px-[30px] py-[34px] ">
+                                        <div className="flex flex-col">
+                                            <div className="text-[#FFF] text-[20px] font-[500] leading-[125%]">{workshop?.title} </div>
+                                            <div className="text-[#FFF] text-[16px] font-[500] opacity-[0.8]">IGNITION-1</div>
+                                            <div className="text-[#FFF] text-[16px] font-[300] leading-[150%] opacity-[0.8] w-[60vw] mt-[24px]">
+                                                {workshop?.about}
+                                            </div>
+                                            <div className="flex gap-[22px] mt-[64px]">
+                                                <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Field<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.field}</span></div>
+                                                <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Organizers<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.organizers}</span></div>
+                                                <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Start Date<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.startDate}</span></div>
+                                                <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Venue<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.venue}</span></div>
+                                            </div>
                                         </div>
-                                        <div className="flex gap-[22px] mt-[64px]">
-                                            <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Field<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.field}</span></div>
-                                            <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Organizers<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.organizers}</span></div>
-                                            <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Start Date<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.startDate}</span></div>
-                                            <div className="text-[#FFF] text-[16px] font-[500] leading-[150%]">Venue<span className="ml-[10px] opacity-[0.8]">{workshop?.details?.venue}</span></div>
+                                        <div className="w-[35vw]">
+                                            <Image src={urlFor(workshop?.image).url()} height={345} width={280} className="rounded-[8px]" alt="" />
                                         </div>
                                     </div>
-                                    <div className="w-[35vw]">
-                                        <Image src={urlFor(workshop?.image).url()} height={345} width={280} className="rounded-[8px]" alt="" />
-                                    </div>
-                                </div>
-                            </CarouselItem>
+                                </CarouselItem>
+                            </Link>
                         ))}
                     </CarouselContent>
                 </Carousel>
