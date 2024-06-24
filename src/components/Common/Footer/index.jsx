@@ -12,7 +12,7 @@ import phone from "../../../../public/assets//phone.svg";
 const Footer = () => {
   return (
     <div className="flex bg-[#022140] px-[80px] py-[88px] gap-[19px]">
-      <div className="flex flex-col gap-[24px]">
+      <div className="flex flex-col gap-[24px] w-[40%]">
         <div className="flex text-[#FFF] text-[16px] font-[400] leading-[150%] gap-[24px]">
           <span className="flex flex-col gap-[16px]">
             <Link href={'https://iitr.ac.in/Departments/Architecture%20and%20Planning%20Department/index.html'}>DAP Website</Link>
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="w-[60%]">
         <Form />
       </div>
     </div>
