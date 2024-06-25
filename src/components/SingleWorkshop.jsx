@@ -4,11 +4,9 @@ import { urlFor } from "@/app/lib/sanity";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+
 
 const SingleWorkshop = ({ data }) => {
   console.log("data", data);
@@ -68,8 +66,8 @@ const SingleWorkshop = ({ data }) => {
         </div>
         <Dialog>
           <DialogTrigger  className="flex items-center text-[#2EA4FF] h-[6vh] text-[16px] font-[500] leading-[150%] p-[16px] rounded-[8px] border-solid border-[3px] border-[#2EA4FF]">View full Report</DialogTrigger>
-          <DialogContent>
-            <embed src={data?.doc} type="" />
+          <DialogContent className="w-[800px] h-[600px] ">
+            <embed src={"/assets/sample.pdf"} className="w-full h-full" type="" />
           </DialogContent>
         </Dialog>
       </div>

@@ -45,7 +45,7 @@ const Notice = async () => {
           <CarouselContent>
             {data.map((notice) => (
               <CarouselItem className="pl-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/5 shadow-lg cursor-grab" key={notice?._id}>
-                <div className="mr-[24px] rounded-[8px] bg-[#FFF] shadow-[1px_2px_12px_0px_rgba(0,0,0,0.16)]">
+                <div className=" rounded-[8px] bg-[#FFF] shadow-[1px_2px_12px_0px_rgba(0,0,0,0.16)]">
                   <div className="p-[12px]">
                     <div className="text-[#1D1D1D] text-[20px] font-[500] leading-[125%]">{notice?.title}</div>
                     <div className="text-[#1D1D1D] text-[16px] font-[400] leading-[125%] opacity-[0.8]">unveiling-1</div>
