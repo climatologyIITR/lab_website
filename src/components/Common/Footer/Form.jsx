@@ -2,6 +2,7 @@ import React from "react";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const Form = () => {
   return (
     <>
@@ -38,7 +39,10 @@ const Form = () => {
             >
               Query Type
             </label>
-            <RadioGroup defaultValue="comfortable" className="text-white gap-y-3">
+            <RadioGroup
+              defaultValue="comfortable"
+              className="text-white gap-y-3"
+            >
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="default" id="r1" />
                 <Label htmlFor="r1">Consultancy</Label>
@@ -52,12 +56,20 @@ const Form = () => {
                 <Label htmlFor="r3">Contact/vist</Label>
               </div>
             </RadioGroup>
-            <Input placeholder="other" className="mt-5 w-[150px] rounded-lg"></Input>
+            <Input
+              placeholder="other"
+              className="mt-5 w-[150px] rounded-lg"
+            ></Input>
           </div>
           <div className="flex justify-end mt-4">
-            <button className="rounded-[12px] bg-[#43E843] w-[150px] h-[5vh] text-[#1D1D1D] text-[20px] font-[400] leading-[150%] ">
-              SUBMIT
-            </button>
+            <Dialog>
+              <DialogTrigger className="rounded-[12px] bg-[#43E843] w-[150px] h-[5vh] text-[#1D1D1D] text-[20px] font-[400] leading-[150%] ">
+                Submit
+              </DialogTrigger>
+              <DialogContent className="w-[400px]">
+                <h1 className="p-4">Your mail has been received</h1>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </form>

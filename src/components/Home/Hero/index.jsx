@@ -29,7 +29,7 @@ function Hero() {
     <div className="flex flex-col -mt-10 lg:p-[80px] gap-y-[72px] py-[60px]">
       <Container className="">
         <div className="flex flex-col md:flex-row">
-          <div className="flex flex-col font-secondary w-[60%]">
+          <div className="flex flex-col font-secondary w-[50%]">
             <p className="text-[#EDD87D] whitespace-nowrap w-fit h-fit m-0 p-0 uppercase text-[50px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-semibold opacity-[0.64]">
               Research{" "}
             </p>
@@ -40,7 +40,7 @@ function Hero() {
               Consult{" "}
             </p>
           </div>
-          <div className="w-[40%] flex justify-center items-center">
+          <div className="w-full flex justify-center items-center">
             {/* <div className="container">
               <h1 className="heading">Flower Gallery</h1>
               <Swiper
@@ -90,7 +90,7 @@ function Hero() {
                 </div>
               </Swiper>
             </div> */}
-            <Carousel
+            {/* <Carousel
               className="w-full max-w-xs"
               plugins={[plugin.current]}
               onMouseEnter={plugin.current.stop}
@@ -111,7 +111,8 @@ function Hero() {
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
-            </Carousel>
+            </Carousel> */}
+            <Image src={"/assets/slide.png"} alt="car" width={500} height={200}></Image>
             {/* <Carousel>
               <CarouselContent>
                 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Arrow from "@/assets/Arrow.svg"
+import Arrow from "@/public/assets/Arrow.svg"
 import Image from 'next/image'
 import { urlFor } from '@/app/lib/sanity'
 import Link from 'next/link'
